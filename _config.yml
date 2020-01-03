@@ -1,13 +1,13 @@
 # Site settings
-title: "Proqramlaşdırma və proqramlaşdırma fəlsəfəsi<br> haqqında bloq"
-author: "Shamkhal Maharramov"
-description: "Proqramlaşdırma və proqramlaşdırma fəlsəfəsi haqqında bloq"
-keywords: "Software Engineering, Mathematics, Philosophy, Scala, Epistemology, Existentialism, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Puzzles"
-biography: "I am Senior Full-Stack Developer with 10+ years of hands-on experience in Design, Development and Deployment of web applications using various technologies."
-colophon: "© 2018 by Shamkhal Maharramov.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons (BY-NC-SA)</a> unless otherwise noted"
+title: "Məhərrəmovun bloqu"
+author: "Şamxal Məhərrəmov"
+description: "Full-Stack Developer və Həvəskar Game developer olaraq öz təcrübələrimi, həllərimi bölüşəcəyim bir bloq"
+keywords: "Proqramlaşdırma öyrən, Oyun yaratmaq, Sayt yaratmaq, Laravel öyrən, Javascript öyrən"
+biography: "10+ il təcrübəsi olan bir Full-Stack Developerəm. Xüsusilə CRM, ERP, Mühasibatlıq/Maliyyə, Sənəd dövriyyəsi tipli layihələr üzrə böyük praktikam var. Bir neçə dövlət əhəmiyyətli layihələrin müəllifiyəm."
+colophon: "© 2020 by Shamkhal Maharramov."
 
 baseurl: ""
-url: "http://hugosereno.eu"
+url: "https://maharramoff.github.io"
 
 github_username: maharramoff
 linkedin_username: shamkhal
