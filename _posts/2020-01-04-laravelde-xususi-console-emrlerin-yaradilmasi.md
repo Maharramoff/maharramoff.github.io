@@ -7,11 +7,11 @@ external-url:
 categories: Laravel
 ---
 
-1. İlk olaraq **app/Console/Commands/Make** qovluğunda müvafiq əmr sinfini yaradırıq.
+**1.** İlk olaraq **app/Console/Commands/Make** qovluğunda müvafiq əmr sinfini yaradırıq.
  
 `php artisan make:command Make/MakeServiceCommand`
 
-2.  MakeServiceCommand.php faylına aşağıdakı kodları yazırıq
+**2.**  MakeServiceCommand.php faylına aşağıdakı kodları yazırıq
 
 ```php
 namespace App\Console\Commands\Make;  
@@ -36,7 +36,7 @@ class MakeServiceCommand extends GeneratorCommand
 }
 ```
 
-3. Daha sonra **resources/stubs** qovluğuna **service.stub** faylı əlavə edir və içinə bu kodları yazırıq. Bu bizim generasiya olunacaq Service siniflərimiz üçün şablondur. Laravel Dummy placeholderlərini müvafiq olaraq yuxarıdakı kodda təyin etdiyimiz **DummyNamespace**-i  **getDefaultNamespace** ilə və **DummyClass**-ı isə əmr zamanı daxil edəcəyimiz adla əvəzləyəcək.
+**3.** Daha sonra **resources/stubs** qovluğuna **service.stub** faylı əlavə edir və içinə bu kodları yazırıq. Bu bizim generasiya olunacaq Service siniflərimiz üçün şablondur. Laravel Dummy placeholderlərini müvafiq olaraq yuxarıdakı kodda təyin etdiyimiz **DummyNamespace**-i  **getDefaultNamespace** ilə və **DummyClass**-ı isə əmr zamanı daxil edəcəyimiz adla əvəzləyəcək.
 
 ```php
 namespace DummyNamespace;  
@@ -46,11 +46,11 @@ class DummyClass
 } 
 ```
 
-4. Əmr hazırdır. Nümunə olaraq, UserService sinfini yaratmaq üçün konsola aşağıdakı əmri daxil edirik 
+**4.** Əmr hazırdır. Nümunə olaraq, UserService sinfini yaratmaq üçün konsola aşağıdakı əmri daxil edirik 
 
 `php artisan make:service UserService`
 
-5. Verdiyimiz şablona əsasən aşağıdakı kod generasiya olunacaqdır.
+**5.** Verdiyimiz şablona əsasən aşağıdakı kod generasiya olunacaqdır.
 
 ```php
 namespace App\Services;  
