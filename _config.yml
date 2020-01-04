@@ -1,19 +1,122 @@
 # Site settings
-title: "Məhərrəmovun bloqu"
-author: "Şamxal Məhərrəmov"
-description: "Full-Stack Developer və Həvəskar Game developer olaraq öz təcrübələrimi, həllərimi bölüşəcəyim bir bloq"
 keywords: "Proqramlaşdırma öyrən, Oyun yaratmaq, Sayt yaratmaq, Laravel öyrən, Javascript öyrən"
 biography: "10+ il təcrübəsi olan bir Full-Stack Developerəm. Xüsusilə CRM, ERP, Mühasibatlıq/Maliyyə, Sənəd dövriyyəsi tipli layihələr üzrə böyük praktikam var. Bir neçə dövlət əhəmiyyətli layihələrin müəllifiyəm."
 colophon: "© 2020 by Shamkhal Maharramov."
 
-baseurl: ""
-url: "https://maharramoff.github.io"
-
-github_username: maharramoff
-linkedin_username: shamkhal
-facebook_username: m.samxal
-
 simple_search: http://google.com/search
 markdown: kramdown
 highlighter: rouge
+
+# main text of home
+name: Məhərrəmovun bloqu
+bio: Full-Stack Developer + Həvəskar Game developer
+
+# meta description
+description: Proqramlaşdırma, Oyunların yaradılması, Alqoritmlərin həlli, Frameworklar, Laravel, Javascript və s. haqqında bloq.
+
+# if it's an external image, update below for true
+# better with square images
+external-image: false
+picture: assets/images/profile.jpg
+
+# If you want to include your resume, set to true
+# and specify source (external or local).
+resume: false
+resume-external: true
+resume-url: https://google.com/?q=my+resume
+
+url: "https://maharramoff.github.io"
+# your url: http://USERNAME.github.io
+
 permalink: /blog/:year/:month/:day/:title/
+
+# To enable google analytics, supply your token below
+# analytics-google: 'UA-MYANALYTICS'
+
+# To enable piwik tracking, supply your url & site ID below
+# analytics-piwik-url: 'piwik.my-host.com'
+# analytics-piwik-id: 1
+
+# if you don't want comments in your posts, leave categories empty
+disqus:
+    shortname: mydisqus # enter this from your disqus account
+    categories: [] # only show disqus for posts that have these categories
+
+# if you don't have any of social below, comment the line
+facebook: m.samxal
+# twitter: mytwitter
+# google: mygoogle
+# instagram: myinstagram
+# pinterest: mypinterest
+linkedin: shamkhal
+# youtube: myyoutube
+# spotify: myspotify
+github: maharramoff
+# gitlab: mygitlab
+# lastfm: mylastfm
+# stackoverflow: 7044681/mystackoverflow
+# quora: userquora
+# reddit: username
+# medium: medium
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+email: sh.maharramov@gmail.com
+
+authors:
+    maharramoff:
+        name: Şamxal Məhərrəmov
+        bio: Full-Stack Developer + Həvəskar Game developer
+        external-image: false
+        picture: assets/images/profile.jpg
+
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
+
+# if you don't need pagination, comment the *paginate* configs below
+# paginate: 5
+# paginate_path: "blog/:num/"
+
+# if you don't need projects, comment the *projects* configs below
+# projects: true
+
+# if you don't need "about" or "blog", comment them out below
+about: true
+blog: true
+
+# do you want to show the "read time" of the posts?
+read-time: true
+
+# do you want to show the "tags" inside the posts?
+show-tags: true
+
+# related posts inside a post?
+related: true
+
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
+
+# show author block at the end of a post ?
+show-author: true
+
+# do you want some animations?
+animation: true
+
+plugins:
+    - jekyll-seo-tag
+    - jekyll-gist
+    - jekyll-feed
+    - jemoji
+    - jekyll-admin
+
+jekyll-mentions:
+    base_url: https://github.com
+
+compress_html:
+    ignore:
+        envs:
+            - development
+            - stage
+
+exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]

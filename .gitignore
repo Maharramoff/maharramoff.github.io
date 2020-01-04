@@ -1,8 +1,10 @@
-_site/
-.sass-cache/
+.DS_Store
+_site
+.sass-cache
+.bundle
+vendor
 .jekyll-metadata
 .jekyll-cache
-.idea/
-.vscode/
-Gemfile
+.idea
+.vscode
 Gemfile.lock

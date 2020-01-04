@@ -1,19 +1,7 @@
-<footer>
-    <div class="container">
-        <div class="row biography">
-            <div class="col-sm-6">
-                <h2>mən kiməm</h2>
-                <p>{{ site.biography }}</p>
-            </div>
-            <div class="col-sm-6">
-                <h2>bloq haqqında</h2>
-                <p>{{ site.description }}</p>
-            </div>
-        </div>
-        {% if site.colophon %}
-        <div class="row copyright text-center">
-            <div class="col-sm-12">{{ site.colophon }}</div>
-        </div>
-        {% endif %}
-    </div>
+<footer class="footer-main">
+    <a class="link" href="https://github.com/sergiokopplin/indigo">{{ site.name }}</a> © {{ site.time | date: '%Y' }} <a class="link" href="{{ site.url }}/feed.xml" target="_blank"><svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg></a>
+
+    <p class="extra">
+        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a> by <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
+    </p>
 </footer>
