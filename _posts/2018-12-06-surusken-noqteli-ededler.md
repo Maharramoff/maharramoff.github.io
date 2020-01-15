@@ -20,31 +20,21 @@ IEEE 754–1985 \- 1985\-ci ildə rəsmi olaraq qəbul edilmiş, (2008\-ci ildə
 
 Eksponensial yazılış (ing. Scientific notation) çox böyük və ya çox kiçik ədədləri ifadə etmək üçün bir düsturdur. Müəyyən riyazi əməliyyatları asanlaşdırdığı üçün əsasən alimlər, riyaziyyatçılar və mühəndislər tərəfindən istifadə olunur. Bu düstura görə istənilən həqiqi ədədi aşağıdakı kimi yazmaq olar:
 
-![](https://miro.medium.com/max/30/1*T4wNPxxsVIS11tssAdj0xw.png?q=20)
-
 ![](https://miro.medium.com/max/241/1*T4wNPxxsVIS11tssAdj0xw.png)
 
 Şəkil 1
 
 Daha bir\-neçə nümunəyə baxaq:
 
-![](https://miro.medium.com/max/30/1*Hpd519qPPvPGQnJJoPJ2GQ.png?q=20)
-
 ![](https://miro.medium.com/max/171/1*Hpd519qPPvPGQnJJoPJ2GQ.png)
-
-![](https://miro.medium.com/max/30/1*LEdLoyj1MCDZIxhlfm3P5g.png?q=20)
 
 ![](https://miro.medium.com/max/161/1*LEdLoyj1MCDZIxhlfm3P5g.png)
 
 Digər tərəfdən 3.5\-i həm
 
-![](https://miro.medium.com/max/30/1*QmZR_Qh9EI5T1HdQbq6lZg.png?q=20)
-
 ![](https://miro.medium.com/max/161/1*QmZR_Qh9EI5T1HdQbq6lZg.png)
 
 həm də
-
-![](https://miro.medium.com/max/30/1*mmzishO4PLwmS1ePYTSSwQ.png?q=20)
 
 ![](https://miro.medium.com/max/161/1*mmzishO4PLwmS1ePYTSSwQ.png)
 
@@ -62,8 +52,6 @@ Verilib 125000000 (və ya 125000000.0)
 ## **3.0 Sürüşkən nöqtəli ədədlərin IEEE754 ilə** `**təsviri**`
 
 Kompyuterdə onluq ədədlər adətən tam ədədlərdən fərqli təsvir olunur. Səbəbi odur ki, ədədin saxlanması üçün bitlərin yalnız fiks olunmuş bir sayı mövcuddur. IEEE 754 standartına görə əvvəlcə mantissa və eksponenti əks etdirən bitlərin miqdarı təyin edilir. Burada iki variant mövcuddur: 32 bitli sadə format və 64 bitli ikiqat dəqiqlikli format. Hər iki variant eyni metodu istifadə edir. Biz hazırki məqalədə 32 bitlik variantı istifadə edəcəyik. 32 bitlik variantda tam ədədlər `{-2,147,483,648,…, +2,147,483,647}` diapazonunda saxlanıla bilər. Aşağıdakı şəkil\-də bitlərin işarə, mantissa və eksponent üzrə paylanması göstərilmişdir.
-
-![](https://miro.medium.com/max/30/1*Sxl8bzRQBvjTmP8j5ifM5Q.png?q=20)
 
 ![](https://miro.medium.com/max/361/1*Sxl8bzRQBvjTmP8j5ifM5Q.png)
 
@@ -95,17 +83,11 @@ Sürüşkən nöqtəli ədədi ikili say sisteminə çevirmək üçün aşağıd
 
 Bəzi nümunələrə baxaq:
 
-![](https://miro.medium.com/max/30/1*qzC61jx70g6ZUXg67CDQwg.png?q=20)
-
 ![](https://miro.medium.com/max/558/1*qzC61jx70g6ZUXg67CDQwg.png)
-
-![](https://miro.medium.com/max/30/1*F7vLgtOipcT38EmV-T7ULA.png?q=20)
 
 ![](https://miro.medium.com/max/582/1*F7vLgtOipcT38EmV-T7ULA.png)
 
 Və yekun olaraq məşhur **0.1 + 0.2 ≠ 0.3** məsələsinə bir də baxaq. Bütün bu yazılanlardan bəlli olur ki, daha sadə dildə desək, kompyuter 0.1\-i əslində 0.1, 0.2 əslində 0.2 kimi saxlamır. Bütün təsvirlər təqribi yaxınlaşmalardır.
-
-![](https://miro.medium.com/max/30/1*BIHkrTlFEX1ttm4wps2sIQ.png?q=20)
 
 ![](https://miro.medium.com/max/666/1*BIHkrTlFEX1ttm4wps2sIQ.png)
 
