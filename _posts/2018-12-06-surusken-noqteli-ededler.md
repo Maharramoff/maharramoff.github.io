@@ -49,7 +49,7 @@ Verilib 125000000 (və ya 125000000.0)
 **2.** Sola doğru **8** sürüşmə etdik. Demək eksponentimiz +8 olacaq.
 **3.** Beləliklə elmi yazılışımız olur: **1.25 x 10⁸**
 
-## **3.0 Sürüşkən nöqtəli ədədlərin IEEE754 ilə** `**təsviri**`
+## **3.0 Sürüşkən nöqtəli ədədlərin IEEE754 ilə təsviri**
 
 Kompyuterdə onluq ədədlər adətən tam ədədlərdən fərqli təsvir olunur. Səbəbi odur ki, ədədin saxlanması üçün bitlərin yalnız fiks olunmuş bir sayı mövcuddur. IEEE 754 standartına görə əvvəlcə mantissa və eksponenti əks etdirən bitlərin miqdarı təyin edilir. Burada iki variant mövcuddur: 32 bitli sadə format və 64 bitli ikiqat dəqiqlikli format. Hər iki variant eyni metodu istifadə edir. Biz hazırki məqalədə 32 bitlik variantı istifadə edəcəyik. 32 bitlik variantda tam ədədlər `{-2,147,483,648,…, +2,147,483,647}` diapazonunda saxlanıla bilər. Aşağıdakı şəkil\-də bitlərin işarə, mantissa və eksponent üzrə paylanması göstərilmişdir.
 
@@ -61,7 +61,7 @@ Bu, sürüşkən nöqtəli ədəddə ilk bitdir və olduqca sadə təyin edilir.
 
 ## 3.2 Eksponent (8\-bit)
 
-8 bitlə biz 0\-dan 255\-ə kimi olan ədədləri göstərə bilərik. `**00000000 = 0**` və `**11111111 = 255**` rezerv edilmişdir; qalmış dəyərlərdən `**{1,…, 254}**` eskponentin faktiki diapazonu `**{-126,…, 127}**` arasında yerdəyişmə (shift) edir. Eksponentin mənfi olmasının mümkünlüyünü nəzərə alaraq, IEEE 754 standartına görə, onun əsl dəyəri aralıq ədəddən alınmalıdır. 8 bit üçün bu aralıq ədəd **127**\-dir. Beləliklə, mənfi işarələrin istifadəsinin mümkün olması üçün biz ekpsonentin üzərinə +127 əlavə etməliyik.
+8 bitlə biz 0\-dan 255\-ə kimi olan ədədləri göstərə bilərik. **`00000000 = 0`** və **`11111111 = 255`** rezerv edilmişdir; qalmış dəyərlərdən **`{1,…, 254}`** eskponentin faktiki diapazonu **`{-126,…, 127}`** arasında yerdəyişmə (shift) edir. Eksponentin mənfi olmasının mümkünlüyünü nəzərə alaraq, IEEE 754 standartına görə, onun əsl dəyəri aralıq ədəddən alınmalıdır. 8 bit üçün bu aralıq ədəd **127**\-dir. Beləliklə, mənfi işarələrin istifadəsinin mümkün olması üçün biz ekpsonentin üzərinə +127 əlavə etməliyik.
 
 Deyək ki,
 \- eksponentimizin 6 olmasını istəyirik. **6 + 127 = 133**, ikili ədədə çeviririk, edir **10000101**
