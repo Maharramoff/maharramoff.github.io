@@ -9,7 +9,7 @@ highlighter: rouge
 
 # main text of home
 name: Məhərrəmovun bloqu
-bio: Full-Stack Developer + Həvəskar Game developer
+bio: Full-Stack + Həvəskar Game Developer
 
 # meta description
 description: Proqramlaşdırma, Oyunların yaradılması, Alqoritmlərin həlli, Frameworklar, Laravel, Javascript və s. haqqında bloq.
@@ -65,7 +65,7 @@ email: sh.maharramov@gmail.com
 authors:
     maharramoff:
         name: Şamxal Məhərrəmov
-        bio: Full-Stack Developer + Həvəskar Game developer
+        bio: Full-Stack + Həvəskar Game Developer
         external-image: false
         picture: assets/images/profile.jpg
 
