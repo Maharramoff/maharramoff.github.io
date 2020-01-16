@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PHP 7-də yeni xüsusiyyətlər. 1) Tip yoxlamaları.
+title: PHP 7-də yeni xüsusiyyətlər. 1) Arqument tip yoxlamaları.
 date: 2016-11-07 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
@@ -8,10 +8,10 @@ tag:
 - php 7
 category: blog
 author: Maharramoff
-description: PHP 7-də yeni xüsusiyyətlər. 1) Tip yoxlamaları.
+description: PHP 7-də yeni xüsusiyyətlər. 1) Arqument tip yoxlamaları.
 ---
 
-Tip yoxlamaları PHP 7-nin ən səs-küylü xüsusiyyətlərindən biridir. Əslində tip yoxlamaları PHP 5-dən bizə qismən tanışdır. Class, interface-lərə, funksiyalara isə `array` və `callable` kimi yoxlamalar verə bilirdik. Yeni xüsusiyyətə görə aşağıdakı tip yoxlamaları var:
+Tip yoxlamaları PHP 7-nin ən səs-küylü xüsusiyyətlərindən biridir. Əslində tip yoxlamaları PHP 5-dən bizə qismən tanışdır. Class, interface-lərə, funksiyalara isə `array` və `callable` kimi yoxlamalar verə bilirdik. Yeni xüsusiyyətə görə aşağıdakı arqument tip yoxlamaları var:
 
 *   **string** - Sətirlər (nümunələr: qələm, məktəb, kitab)
 *   **int** - Tam ədədlər (nümunələr: 1, 2 və ya 9)
