@@ -1,14 +1,14 @@
 <nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
     <ul class="list">
         {% if page.title != "Home" %}
-            <li class="item">
+            <li class="item" style="margin-right: 5px;">
                 <a class="link" href="{{ site.url }}/">Baş səhifə</a>
             </li>
         {% endif %}
 
         {% if site.blog == true %}
             {% if page.title != "Blog" %}
-                <li class="item">
+                <li class="item" style="margin-right: 5px;">
                     <a class="link" href="{{ site.url }}/blog">Məqalələr</a>
                 </li>
             {% endif %}
@@ -16,7 +16,7 @@
 
         {% if site.projects == true %}
             {% if page.title != "Projects" %}
-                <li class="item">
+                <li class="item" style="margin-right: 5px;">
                     <a class="link" href="{{ site.url }}/projects">Portfolio</a>
                 </li>
             {% endif %}
