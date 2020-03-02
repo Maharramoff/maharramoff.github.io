@@ -34,7 +34,9 @@ Post -> belongsTo -> Author
 Author -> hasMany -> Post
 ```
 Müəlliflər və hər müəllifin adı altında ona aid olan postları göstərən belə bir view faylımız var
-```php
+
+<!-- {% raw %} -->
+```html
 @foreach ($authors as $author)
     <h1>Müəllifi {{ $author->name }} olan postlar:</h1>
     <table>
@@ -47,6 +49,8 @@ Müəlliflər və hər müəllifin adı altında ona aid olan postları göstər
     </table>
 @endforeach
 ```
+<!-- {% endraw %} -->
+
 Team Lead qəzəblidir, deadline sıxır, onsuz da gərginlik çoxdur, çaparaq belə bir kod yazırıq və … Həyat davam edir, hər şey gözəldir.
 
 ```php
