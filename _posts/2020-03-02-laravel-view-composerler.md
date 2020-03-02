@@ -29,7 +29,7 @@ Route::get('payment/create', 'PaymentController@create');
 Route::get('customer', 'CustomerController@index');
 ```
 
-**Həll 1** İlk olaraq ənənəvi üsulla həll edək. Hər iki kontrollerimizi yaradırıq və içinə bu kodları yazırıq. 
+**Həll 1.** İlk olaraq ənənəvi üsulla həll edək. Hər iki kontrollerimizi yaradırıq və içinə bu kodları yazırıq. 
 ```php
 namespace App\Http\Controllers;  
   
@@ -63,7 +63,8 @@ class CustomerController extends Controller
 ```
 Daha sonra view-ları yaradaq.
 1. payment.create
-```html
+
+```php
 <form>
     <select name="customer_id" id="customer_id">   
         @foreach($customers as $customer)  
@@ -73,7 +74,7 @@ Daha sonra view-ları yaradaq.
 </form>
 ```
 2. customer.index
-```html
+```php
 <div class="content">
     <ul>   
         @foreach($customers as $customer)  
@@ -84,7 +85,7 @@ Daha sonra view-ları yaradaq.
 ```
 Okay. İlk baxışdan tamamilə normal bir həll kimi görünür. Amma burada bir problem gizlənir. Növbəti həll metodunda bunu açıqlayacaqam.
 
-**Həll 2** `View::share` metodu.
+**Həll 2.** `View::share` metodu.
 İndi isə təsəvvür edin ki, tələb gəlir ki, bütün sistem üzrə müştərilərin siyahısı mütləq adlara görə sıralanmalıdır. Yuxarıdakı həll variantımızda biz bunun üçün hər bir controllerdə belə bir dəyişiklik etməli olardıq:
 ```php
 class PaymentController extends Controller  
@@ -145,7 +146,7 @@ class CustomerController extends Controller
 ```
 Buna bəlkə də çox yaxşı həll kimi baxmaq olar, amma nəzərə alsaq ki, çox nadir hallarda eyni datanı bütün sistem üzrə istifadə edirik, yazdığımız həllə görə istənilən bir view fayl render olunan zaman məlumat bazasına hər dəfə gərəkli olub-olmadan sorğu göndərmiş olacayıq. 3-cü həlldə buna baxaq.
 
-**Həll 3** `View::composer` metodu. Bu metod bizə imkan verir ki, datanı məhz bizə lazım olan view-lar arasında paylaşaq. Hazırki nümunədə bizə bu datanı sadəcə 2 view üçün paylaşmaq istəyirik. Odur ki, composer metoduna aşağıdakı parametrləri ötürməliyik.
+**Həll 3.** `View::composer` metodu. Bu metod bizə imkan verir ki, datanı məhz bizə lazım olan view-lar arasında paylaşaq. Hazırki nümunədə bizə bu datanı sadəcə 2 view üçün paylaşmaq istəyirik. Odur ki, composer metoduna aşağıdakı parametrləri ötürməliyik.
 
 ```php
 class AppServiceProvider extends ServiceProvider  
@@ -161,7 +162,7 @@ class AppServiceProvider extends ServiceProvider
 ```
 Bununla məqaləni bitirmək olardı əslində. Amma gəlin bir az da dərinə getməyə çalışaq. Məqalənin bundan sonrakı hissəsində SOLID, DRY, KISS prinsiplərinə mümkün qədər əməl etməyə çalışacayıq. 
 
-**Həll 3.1** Son yazdığımız bir sətirli həll əksər hallarda kifayət edər. Amma bəzən bir datanı əldə etmək üçün, çoxsaylı əməliyyatlar, yoxlamalar, şərtlər yazırıq. Bu qədər kodu boot metodunda yazmaqdansa, onu özünə məxsus bir sinfə köçürmək olar.  Bunun üçün `app/Http/View/Composers` direktoriyası (adlandırma və yerləşmə sərbəstdir) yaradaq və oraya `CustomersComposer` sinfini əlavə edək.
+**Həll 3.1.** Son yazdığımız bir sətirli həll əksər hallarda kifayət edər. Amma bəzən bir datanı əldə etmək üçün, çoxsaylı əməliyyatlar, yoxlamalar, şərtlər yazırıq. Bu qədər kodu boot metodunda yazmaqdansa, onu özünə məxsus bir sinfə köçürmək olar.  Bunun üçün `app/Http/View/Composers` direktoriyası (adlandırma və yerləşmə sərbəstdir) yaradaq və oraya `CustomersComposer` sinfini əlavə edək.
 ```php
 namespace App\Http\View\Composers;  
   
@@ -187,9 +188,9 @@ class AppServiceProvider extends ServiceProvider
     }  
 }
 ```
-**Həll 3.2** Nəzərə alsaq ki, Laravelin imkanları çox genişdir, bir az da dərinə gedə bilərik. Gəlin, həll 1-də yazdığımız view fayllarını bir qədər də optimallaşdıraq. Düşünün ki, select elementini və ya digər listi eynilə başqa view fayllarında da istifadə etmək istəyirik. Buna görə biz yenə yuxarıdakı addımları təkrarlamalı olarıq, view fayl yaratmalı, həmin view faylı AppServiceProvider-də qeyd etməli olarıq. Bu qədər təkrarçılığa yol verməmək üçün, `resources/views/partials/customers` direktoriya strukturunu yaradaq və içinə belə bir blade faylları əlavə edək.
+**Həll 3.2.** Nəzərə alsaq ki, Laravelin imkanları çox genişdir, bir az da dərinə gedə bilərik. Gəlin, həll 1-də yazdığımız view fayllarını bir qədər də optimallaşdıraq. Düşünün ki, select elementini və ya digər listi eynilə başqa view fayllarında da istifadə etmək istəyirik. Buna görə biz yenə yuxarıdakı addımları təkrarlamalı olarıq, view fayl yaratmalı, həmin view faylı AppServiceProvider-də qeyd etməli olarıq. Bu qədər təkrarçılığa yol verməmək üçün, `resources/views/partials/customers` direktoriya strukturunu yaradaq və içinə belə bir blade faylları əlavə edək.
 Bunlardan biri `select.blade.php` olsun
-```html
+```php
 <select name="customer_id" id="customer_id">   
     @foreach($customers as $customer)  
         <option value="{{ $customer->id }}">{{ $customer->name }}</option>  
@@ -197,7 +198,7 @@ Bunlardan biri `select.blade.php` olsun
 </select>
 ```
 Digəri olsun `list.blade.php`
-```html
+```php
 <ul>
     @foreach($customers as $customer)  
         <li><a href="customer/{{ $customer->id }}">{{ $customer->name }}</a></li>  
@@ -207,13 +208,13 @@ Digəri olsun `list.blade.php`
 Blade-in `@include` direktivi bizə bir blade faylını digər blade fayllarında çağırmağa imkan verir. Bundan yararlanaraq **Həll 1**-dəki fayllarda aşağıdakı dəyişiklikləri edək. 
 
 1. payment.create
-```html
+```php
 <form>
 	@include('partials.customers.select')
 </form>
 ```
 2. customer.index
-```html
+```php
 <div class="content">
 	@include('partials.customers.list')
 </div>
@@ -232,7 +233,7 @@ class AppServiceProvider extends ServiceProvider
 ```
 Bundan sonra həmin datanı daha başqa formada başqa bir faylda istifadə etmək lazım olduqda artıq çoxsaylı faylları dəyişməyə ehtiyac olmayacaq. Sadəcə `partials.customers` qovluğunda sizə lazım olan blade faylını yaradacaq və onu istifadə etmək istədiyiniz faylda `@include` edəcəksiniz. Bu qədər sadə.
 
-**Bonus** Əgər sizə lazım olan data çox dinamik bir data deyilsə və sistemin çox hissəsində istifadə olunursa, Laravelin cache imkanından istifadə edərək həllimizi daha da optimallaşdıra bilərik. Bunun üçün `CustomersComposer`-də aşağıdakı dəyişikliyi edək.
+**Bonus.** Əgər sizə lazım olan data çox dinamik bir data deyilsə və sistemin çox hissəsində istifadə olunursa, Laravelin cache imkanından istifadə edərək həllimizi daha da optimallaşdıra bilərik. Bunun üçün `CustomersComposer`-də aşağıdakı dəyişikliyi edək.
 
 ```php
 namespace App\Http\View\Composers;  
