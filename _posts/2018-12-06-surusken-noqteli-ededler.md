@@ -4,6 +4,7 @@ title: Sürüşkən nöqtəli ədədlərin ikili say sistemində təsviri
 date: 2018-12-06 18:00
 image: /assets/images/posts/surusken-noqteli-ededler.png
 headerImage: true
+projects: false
 tag:
 - ieee754
 - float

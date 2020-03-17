@@ -4,6 +4,7 @@ title: Laraveldə xüsusi Blade direktivlərin yaradılması
 date: 2019-04-23 00:00
 image: /assets/images/posts/blade-directives.png
 headerImage: true
+projects: false
 tag:
 - laravel
 - php

@@ -4,6 +4,7 @@ title: Java 8-də Lambda ifadələr. Sadə nümunələrlə.
 date: 2016-11-04 00:00
 image: /assets/images/posts/java-8-lambdas.jpg
 headerImage: true
+projects: false
 tag:
 - java
 - lambda

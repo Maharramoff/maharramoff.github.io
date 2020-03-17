@@ -4,6 +4,7 @@ title: Laraveldə modellərin istədiyimiz qovluqda yaradılması
 date: 2020-01-08 00:15
 image: /assets/images/markdown.jpg
 headerImage: false
+projects: false
 tag:
 - laravel
 - artisan

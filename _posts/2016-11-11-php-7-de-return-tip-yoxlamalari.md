@@ -4,6 +4,7 @@ title: PHP 7-də yeni xüsusiyyətlər. 2) Return tip yoxlamaları və null birl
 date: 2016-11-11 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
+projects: false
 tag:
 - php 7
 category: blog

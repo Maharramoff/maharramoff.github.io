@@ -4,6 +4,7 @@ title: Proqramlaşdırmada Rekursiyalar. "Speed vs Beauty"
 date: 2016-10-09 00:00
 image: /assets/images/posts/fibo-recursion.jpg
 headerImage: true
+projects: false
 tag:
 - sürət
 - rekursiya

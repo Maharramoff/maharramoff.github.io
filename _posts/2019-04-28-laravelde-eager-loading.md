@@ -4,6 +4,7 @@ title: Laravel-də eager loading - with() və bir az da load() haqqında
 date: 2019-04-23 00:00
 image: /assets/images/posts/eager-loading.png
 headerImage: true
+projects: false
 tag:
 - laravel
 - php

@@ -4,6 +4,7 @@ title: PHP 7-də yeni xüsusiyyətlər. 1) Arqument tip yoxlamaları.
 date: 2016-11-07 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
+projects: false
 tag:
 - php 7
 category: blog
