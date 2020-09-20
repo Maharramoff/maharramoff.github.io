@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python. Bitwise XOR ^ vs Standart method vs List comprehension. Tənha ədədin tapılması və Benchmark.
+title: Python. Bitwise XOR ^ vs Standard method vs List comprehension. Tənha ədədin tapılması və Benchmark.
 date: 2020-04-15 14:20
 image: /assets/images/posts/python.png
 headerImage: true
