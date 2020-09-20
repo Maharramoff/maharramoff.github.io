@@ -2,7 +2,7 @@
 layout: post
 title: Python. For..else VS For, if..else
 date: 2018-01-13 20:35
-image: /assets/images/python.png
+image: /assets/images/posts/python.png
 headerImage: false
 projects: false
 
