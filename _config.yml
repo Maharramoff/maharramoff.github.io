@@ -7,6 +7,8 @@ simple_search: http://google.com/search
 markdown: kramdown
 highlighter: rouge
 
+maintenance_mode: true 
+
 # main text of home
 name: Məhərrəmovun bloqu
 bio: Full-Stack + Həvəskar Game Developer
