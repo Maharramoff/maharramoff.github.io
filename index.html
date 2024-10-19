@@ -2,28 +2,29 @@
 layout: page
 title: Home
 ---
+
 <section class="list">
-    {% if site.maintenance_mode %} 
+  {% if site.maintenance_mode %} 
     <p class="text-center">This blog is currently under maintenance. Please check back later.</p> 
-    {% if site.posts.size == 0 %}
+  {% elsif site.posts.size == 0 %}
     <p class="text-center">Nothing published yet!</p>
-    {% elsif site.paginate %}
+  {% elsif site.paginate %}
     {% for post in paginator.posts %}
-    {% if post.category == 'blog' %}
-    {% if post.hidden != true %}
-    {% include blog-post.html %}
-    {% endif %}
-    {% endif %}
+      {% if post.category == 'blog' %}
+        {% if post.hidden != true %}
+          {% include blog-post.html %}
+        {% endif %}
+      {% endif %}
     {% endfor %}
 
     {% include pagination.html%}
-    {% else %}
+  {% else %}
     {% for post in site.posts %}
-    {% if post.category == 'blog' %}
-    {% if post.hidden != true %}
-    {% include blog-post.html %}
-    {% endif %}
-    {% endif %}
+      {% if post.category == 'blog' %}
+        {% if post.hidden != true %}
+          {% include blog-post.html %}
+        {% endif %}
+      {% endif %}
     {% endfor %}
-    {% endif %}
+  {% endif %}
 </section>
